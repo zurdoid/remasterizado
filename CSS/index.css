@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+    background-color: rgb(190, 209, 231);
+    font-family: 'Mate', serif;
+}
+img{
+    max-width: 100%;
+}
+h1{
+    margin-top: 15px;
+    color: black;
+    text-align: center;
+}
+main{
+    margin-top: 10%;
+    height: 500px;
+    background-image: url(/img/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 3px solid rgba(62, 62, 124);
+    border-radius: 5px;
+    position: relative;
+}
+main::after{/*----como una capa de color opaco encima de foto main*/
+    content: '';
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.inicio-sesion{
+    margin-top: 303px;
+    margin-left: 65%; 
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 246, 246, 0.450);
+    width: 300px;
+    height: 250px;
+    border: solid 3px white;
+    border-radius: 5px;
+}
+@media (max-width: 970px){
+    .inicio-sesion{
+        margin: 100px 0 0 20px;
+    }
+}
+label{
+    display: block;
+    margin: 18px 0 3px 30px;
+}
+input{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    border-radius: 15px;
+    background-color: floralwhite;
+    
+}
+.btn-ingresar{
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 0px;
+    
+}
