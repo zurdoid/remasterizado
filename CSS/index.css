@@ -1,3 +1,11 @@
+:root {
+    --azul1: #3B3DA4;
+    --azul2: #5052C2;
+    --azul3: #7577D0;
+    --gris: #BCBCBC;
+    --beige: #D6D6D6; 
+}
+
 html {
   box-sizing: border-box;
 }
@@ -5,7 +13,7 @@ html {
   box-sizing: inherit;
 }
 body{
-    background-color: rgb(190, 209, 231);
+    background-color: var(--beige);
     font-family: 'Mate', serif;
 }
 img{
@@ -22,22 +30,43 @@ main{
     background-image: url(/img/fondo.jpg);
     background-position: center;
     background-size: cover;
-    border: 3px solid rgba(62, 62, 124);
+    border: 5px solid var(--azul2);
     border-radius: 5px;
     position: relative;
 }
 main::after{/*----como una capa de color opaco encima de foto main*/
     content: '';
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .1);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
+label{
+    display: none;
+    margin: 18px 0 3px 30px;
+}
+input{
+    display: none;
+    margin: 0 auto;
+    width: 250px;
+    border-radius: 15px;
+    background-color: rgb(200, 188, 188);   
+}
+::-webkit-input-placeholder { color: white; } /*para cambiar de color los placeholder*/
+
+.btn-ingresar{
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--azul1);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 .inicio-sesion{
-    margin-top: 303px;
-    margin-left: 65%; 
+    margin: 100px 0 0 20px;
     position: relative;
     z-index: 1;
     background-color: rgba(255, 246, 246, 0.450);
@@ -46,26 +75,25 @@ main::after{/*----como una capa de color opaco encima de foto main*/
     border: solid 3px white;
     border-radius: 5px;
 }
-@media (max-width: 970px){
+@media (min-width: 970px){
     .inicio-sesion{
-        margin: 100px 0 0 20px;
+        margin-top: 303px;
+        margin-left: 65%;
+    }
+
+}    
+@media (min-width: 420px){
+    .advertencia{
+        display: none;
+
+    }
+    label, input{
+        display: block;
     }
 }
-label{
-    display: block;
-    margin: 18px 0 3px 30px;
+.advertencia{
+    text-align: center;
+    color: red;
 }
-input{
-    display: block;
-    margin: 0 auto;
-    width: 250px;
-    border-radius: 15px;
-    background-color: floralwhite;
-    
-}
-.btn-ingresar{
-    margin-top: 20px;
-    height: 30px;
-    border-radius: 0px;
-    
-}
+
+
