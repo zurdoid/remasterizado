@@ -2,8 +2,14 @@
     --azul1: #3B3DA4;
     --azul2: #5052C2;
     --azul3: #7577D0;
+    --azul4: #ecfcff;
     --gris: #BCBCBC;
-    --beige: #D6D6D6; 
+    --beige: #D6D6D6;
+    /*paleta de otras combinaciones*/
+    --azulp1: #00204a;
+    --azulp2: #005792;
+    --azulp3: #d9faff;
+    --orange: #fd5f00;
 }
 
 html {
@@ -13,7 +19,7 @@ html {
   box-sizing: inherit;
 }
 body{
-    background-color: var(--beige);
+    background-color: var(--azulp3);
     font-family: 'Mate', serif;
 }
 img{
@@ -24,7 +30,7 @@ h1{
     color: black;
     text-align: center;
 }
-main{
+.login{
     margin-top: 10%;
     height: 500px;
     background-image: url(/img/fondo.jpg);
@@ -34,7 +40,7 @@ main{
     border-radius: 5px;
     position: relative;
 }
-main::after{/*----como una capa de color opaco encima de foto main*/
+.login::after{/*----como una capa de color opaco encima de foto .login*/
     content: '';
     background-color: rgba(0, 0, 0, .1);
     position: absolute;
@@ -51,6 +57,7 @@ input{
     display: none;
     margin: 0 auto;
     width: 250px;
+    border: solid 2px var(--azul2);
     border-radius: 15px;
     background-color: rgb(200, 188, 188);   
 }
@@ -64,6 +71,11 @@ input{
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
+    border-width: 0px;
+}
+.btn-ingresar:focus{
+ 
 }
 .inicio-sesion{
     margin: 100px 0 0 20px;
@@ -74,6 +86,10 @@ input{
     height: 250px;
     border: solid 3px white;
     border-radius: 5px;
+    -webkit-box-shadow: 10px 18px 21px -2px rgba(0,0,0,0.65);
+    -moz-box-shadow: 10px 18px 21px -2px rgba(0,0,0,0.65);
+    box-shadow: 10px 18px 21px -2px rgba(0,0,0,0.65);
+
 }
 @media (min-width: 970px){
     .inicio-sesion{
@@ -82,7 +98,7 @@ input{
     }
 
 }    
-@media (min-width: 420px){
+@media (min-width: 814px){
     .advertencia{
         display: none;
 
