@@ -74,16 +74,21 @@ input{
     cursor: pointer;
     border-width: 0px;
 }
-.btn-ingresar:focus{
- 
+.logo{
+    width: 130px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    
 }
 .inicio-sesion{
+    padding-top: 15px;
     margin: 100px 0 0 20px;
     position: relative;
     z-index: 1;
     background-color: rgba(255, 246, 246, 0.450);
     width: 300px;
-    height: 250px;
+    height: 300px;
     border: solid 3px white;
     border-radius: 5px;
     -webkit-box-shadow: 10px 18px 21px -2px rgba(0,0,0,0.65);

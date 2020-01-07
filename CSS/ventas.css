@@ -1,0 +1,103 @@
+:root {
+    --azul4: #ecfcff;
+    --gris: #BCBCBC;
+    --beige: #D6D6D6;
+    /*paleta de otras combinaciones*/
+    --azulp1: #00204a;
+    --azulp2: #005792;
+    --azulp3: #d9faff;
+    --orange: #fd5f00;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img{
+    max-width: 100%;
+}
+/*-----------Declaraciones Globales----------*/
+
+.encabezado-bar{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#324d93+3,324d93+51,324d93+51,aad6e1+51,324d93+99&0+0,0.8+7,1+30,1+74,0.8+93,0+100 */
+background: -moz-linear-gradient(top,  rgba(50,77,147,0) 0%, rgba(50,77,147,0.34) 3%, rgba(60,88,154,0.8) 7%, rgba(118,154,191,1) 30%, rgba(170,214,225,1) 51%, rgba(113,148,188,1) 74%, rgba(65,94,157,0.8) 93%, rgba(50,77,147,0.11) 99%, rgba(50,77,147,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(50,77,147,0) 0%,rgba(50,77,147,0.34) 3%,rgba(60,88,154,0.8) 7%,rgba(118,154,191,1) 30%,rgba(170,214,225,1) 51%,rgba(113,148,188,1) 74%,rgba(65,94,157,0.8) 93%,rgba(50,77,147,0.11) 99%,rgba(50,77,147,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(50,77,147,0) 0%,rgba(50,77,147,0.34) 3%,rgba(60,88,154,0.8) 7%,rgba(118,154,191,1) 30%,rgba(170,214,225,1) 51%,rgba(113,148,188,1) 74%,rgba(65,94,157,0.8) 93%,rgba(50,77,147,0.11) 99%,rgba(50,77,147,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00324d93', endColorstr='#00324d93',GradientType=0 ); /* IE6-9 */
+
+padding: 15px 10px;
+}
+.encabezado{
+    margin: 0 auto;
+    max-width: 85%;
+    align-items: center;
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+}
+.logo{
+    display: none;
+}     
+.login-usuario i{
+    display: none;
+    color: #111111;
+    margin: 0;
+    padding: 7px 9px;
+    border-radius: 50%;
+    background-color: var(--beige);
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    border: solid 2px #111111;
+}
+.login-usuario p{
+    display: inline;
+    font-size: 12px;
+}
+.empresa{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-self: flex-start;
+    
+}
+.empresa img{
+    width: 130px;
+    height: 70px;
+    border-radius: 15px;
+    margin-right: 35px;   
+}
+.empresa h2{
+    margin: 0px;
+    font-size: 44px;
+    font-family: 'Arizonia', cursive;
+}
+@media (min-width: 900px){
+    .encabezado{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;   
+    }
+    .logo{
+        display: inline;
+    }
+    .empresa h2{
+        font-size: 80px;
+        font-weight: lighter;
+    }
+    .empresa h2 span{
+        font-weight: bold;
+    }
+    .login-usuario i{
+        display: block;
+        padding: 10px 12px;
+        font-size: 25px; 
+    }
+    .login-usuario p{
+        display: none;
+    }
+
+}
